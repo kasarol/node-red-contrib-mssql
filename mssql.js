@@ -79,6 +79,8 @@ module.exports = function(RED) {
             if (!query || (query === '')) {
                 query = msg.payload;
             }
+            
+            msg.query = query;
 
             var request = new node.connection.Request();
 
